@@ -12,11 +12,11 @@ const questions=[
 },
 {
     type:"input",
-    name:"textColor",
+    name:"text_color",
     message:"what color would you like the text to be",
 },{
     type:"input",
-    name:"fill",
+    name:"shape_color",
     message:"what color would you like your shape to be?",}
 ];
 

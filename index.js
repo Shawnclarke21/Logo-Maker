@@ -7,9 +7,9 @@ const init = () => {
     inquirer.prompt(questions)
         .then((data) => {
             console.log("Creating svg file...");
-            switch (data.Shape) {
-                case 'square':
-                    const newSquare = new Square();
+            switch (`${data.Shape}`) {
+                case 'Square':
+                    const Square = new Square();
                     newSquare.setcolor(data.color);
                     fs.writeFile("main/output/logo.svg", newSquare.render(), (err) => {
                         if (err) {
