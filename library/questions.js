@@ -3,7 +3,7 @@ const questions=[
      type:"list",
      name:"shapes",
      message:"what shape would you like?",
-     choices:['circle','square','triangle']
+     choices:['Circle','Square','Triangle']
 },
 {
     type:"input",
@@ -13,7 +13,7 @@ const questions=[
 {
     type:"input",
     name:"textColor",
-    message:"whatcolor would you like the text to be",
+    message:"what color would you like the text to be",
 },{
     type:"input",
     name:"fill",
