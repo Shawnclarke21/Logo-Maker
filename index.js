@@ -1,29 +1,30 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
-const { Circle, Triangle, Square } = require('./library/shapes');
+const generateLogo = require('./util/generateLogo');
 const questions = require('./library/questions');
 
-const init = () => {
-    inquirer.prompt(questions)
-        .then((data) => {
-            console.log("Creating svg file...");
-            switch (`${data.Shape}`) {
-                case 'Square':
-                    const Square = new Square();
-                    newSquare.setcolor(data.color);
-                    fs.writeFile("main/output/logo.svg", newSquare.render(), (err) => {
-                        if (err) {
-                            console.error(err);
-                        } else {
-                            console.log('Square was created');
-                        }
-                    });
-                    break;
-               
-                default:
-                    console.log('Invalid shape');
+function writeToFile(filename, data) {
+    return new Promise((resolve, reject) => {
+        const content = generateLogo(data);
+        fs.writeFile(filename, content, (err) => {
+            if (err) {
+                reject(err);
+            } else {
+                resolve();
             }
         });
-};
+    });
+}
+
+async function init() {
+    try {
+        const data = await inquirer.prompt(questions);
+        const filename = 'logo.svg';
+        await writeToFile(filename, data);
+        console.log('File has been written successfully.');
+    } catch (error) {
+        console.error('Error writing to file:', error);
+    }
+}
 
 init();
