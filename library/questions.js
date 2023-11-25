@@ -1,7 +1,7 @@
 const questions=[
    {
      type:"list",
-     name:"shapes",
+     name:"shape",
      message:"what shape would you like?",
      choices:['Circle','Square','Triangle']
 },
