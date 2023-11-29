@@ -13,3 +13,7 @@ this project was created by me shawn clarke and i used guides from youtube for r
 
 
 https://drive.google.com/file/d/1IOqNdPxQBeoxbhMsozEQmkhQcUPEmjn_/view
+https://github.com/Shawnclarke21/Logo-Maker
+![Screenshot 2023-11-29 135645](https://github.com/Shawnclarke21/Logo-Maker/assets/139307719/3b74a3c4-3183-4b8d-8c13-e9d9cfde37bb)
+
+![Screenshot 2023-11-29 135718](https://github.com/Shawnclarke21/Logo-Maker/assets/139307719/3449933d-c054-4dbb-bc39-bd168a99550f)
